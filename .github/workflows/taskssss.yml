@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Application Version
-      id: version
+      id: version + 1
       uses: anothrNick/github-tag-action@1.36.0
       with:
-        change_path: "src/service"
+       WITH_V: true
           
          
 
