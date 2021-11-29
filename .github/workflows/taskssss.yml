@@ -10,7 +10,7 @@ jobs:
     steps:
     - name: Application Version
       id: version
-      uses: paulhatch/semantic-version@v4.0.2
+      uses: anothrNick/github-tag-action@1.36.0
       with:
         change_path: "src/service"
           
