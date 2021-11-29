@@ -12,8 +12,7 @@ on:
       #- 'releases/**'
     # Sequence of patterns matched against refs/tags
     tags:        
-      - v1             # Push events to v1 tag
-      - v1.* 
+      - versionzz 
     
 
 jobs:
