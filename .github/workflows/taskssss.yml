@@ -1,18 +1,26 @@
 name: next-version
 
-on: push
+on: 
+ push:
+    
+    
+    tags:        
+      - v1.*            
+    
   
 
 jobs:
   build:
-
+  
     runs-on: ubuntu-latest
+    
     steps:
     - name: Application Version
-      id: version
-      uses: paulhatch/semantic-version@v4.0.2
+      id: v
+      uses: anothrNick/github-tag-action@1.36.0
       with:
-        change_path: "src/service"
+       WITH_V: true
+     
           
          
 
