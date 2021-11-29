@@ -1,13 +1,19 @@
 name: next-version
 
-on: 
- push:
-    
-    
+on:
+  push:
+    # Sequence of patterns matched against refs/heads
+    branches:    
+      # Push events on main branch
+      - master
+      # Push events to branches matching refs/heads/mona/octocat
+     #'mona/octocat'
+      # Push events to branches matching refs/heads/releases/10
+      #- 'releases/**'
+    # Sequence of patterns matched against refs/tags
     tags:        
-      - v1.*            
+      - versionzz 
     
-  
 
 jobs:
   build:
@@ -16,7 +22,7 @@ jobs:
     
     steps:
     - name: Application Version
-      id: v
+      id: version
       uses: anothrNick/github-tag-action@1.36.0
       with:
        WITH_V: true
