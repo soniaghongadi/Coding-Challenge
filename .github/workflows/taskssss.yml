@@ -1,6 +1,10 @@
 name: next-version
 
-on: push
+on: 
+  push:
+    tags:
+      - v.1*
+    
 
 jobs:
   build:
