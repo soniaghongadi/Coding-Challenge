@@ -1,9 +1,19 @@
 name: next-version
 
-on: 
+on:
   push:
-    tags:
-      - v.1*
+    # Sequence of patterns matched against refs/heads
+    branches:    
+      # Push events on main branch
+      - master
+      # Push events to branches matching refs/heads/mona/octocat
+     #'mona/octocat'
+      # Push events to branches matching refs/heads/releases/10
+      #- 'releases/**'
+    # Sequence of patterns matched against refs/tags
+    tags:        
+      - v1             # Push events to v1 tag
+      - v1.* 
     
 
 jobs:
