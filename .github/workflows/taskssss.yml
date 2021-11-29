@@ -16,7 +16,7 @@ jobs:
     
     steps:
     - name: Application Version
-      id: version
+      id: v
       uses: anothrNick/github-tag-action@1.36.0
       with:
        WITH_V: true
