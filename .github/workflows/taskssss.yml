@@ -1,18 +1,26 @@
 name: next-version
 
-on: push
+on: 
+ push:
+    
+    
+    tags:        
+      - v1.*            
+    
   
 
 jobs:
   build:
-
+  
     runs-on: ubuntu-latest
+    
     steps:
     - name: Application Version
       id: version*
       uses: anothrNick/github-tag-action@1.36.0
       with:
        WITH_V: true
+     
           
          
 
